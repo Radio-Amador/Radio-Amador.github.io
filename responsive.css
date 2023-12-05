@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(img/background.jpg);
+  background-size: cover;
+  font-family: 'Coolvetica', sans-serif;
+  overflow-x: hidden;
+}  
+
+@media only screen and (max-width: 768px) {
+/* Adaptações para telas menores */
+
+.card_header,
+.img-container,
+.details,
+.overlay,
+.wrapper {
+  width: 100%;
+}
+
+.news-title {
+  font-size: 1rem;
+}
+
+.wrapper p {
+  font-size: 0.8rem;
+}
+
+nav {
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.logo img {
+  width: 120px;
+}
+
+.search {
+  margin-top: 10px;
+}
+
+.search input {
+  width: 80%;
+}
+
+
+#cards,
+.titulo,
+#music_request,
+.form-song,
+.title-song {
+  width: 90%;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+header{
+  width: 90%;
+  height: 300px;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+
+section{
+  height: 700px;
+  width: 90%;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+#musicRequestFormContainer {
+  max-width: 100%;
+}
+
+#request-song {
+  align-items: center;
+}
+
+#cards {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 600px;
+}
+
+.card {
+  margin-bottom: 20px;
+  width: 35%;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.social-media span{
+  display: none;
+}
+
+.social-media a {
+  margin: 10px 0;
+
+}
+
+.social-media img {
+  width: 30px;
+  margin-bottom: 5px;
+  padding: 5px 20px;
+}
+
+.copyright p {
+  font-size: 14px;
+  text-align: center;
+
+}
+.radio {
+  height: 100%;
+  margin-top: 50px; /* Ajuste conforme necessário */      
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: #2e2f33;
+} 
+
+.radio span{
+  font-size: 30pt;
+}
+
+#audioPlayer{
+  margin: 0;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.popup img {
+  max-width: 100%;
+  height: auto;
+  width: 50%; /* Defina a largura desejada em porcentagem */
+  height: auto; /* Mantenha a altura automática para manter a proporção original */
+}
+
+.card-popup-button {
+  margin-left: 35px;
+}
+
+
+}
+

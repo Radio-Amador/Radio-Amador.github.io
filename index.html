@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/coolvetica-2" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/be-true-to-your-school" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="server.js"></script>
+    <title>Rádio Amador</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/logo.png" alt="Sua Logo">
+            <div class="logo_radio">
+                <img src="img/radio.png" alt="Sua Logo">     
+            </div>
+        </div>
+        <div class="radio">
+            <audio id="audioPlayer" controls autoplay>
+                <source src="https://stream-152.zeno.fm/kehkcqasheztv?zs=EmQolmo3T3GDsZ4qQ_43Kw" type="audio/mp3">
+                Seu navegador não suporta a tag de áudio.
+            </audio>
+            <h1><span>APERTE PLAY</span><br> Para Ouvir ao Vivo</h1>
+        </div>
+    </nav>
+
+    <header>
+        <!-- Card de Notícia da página - Se necessário mais de uma notícia, duplicar e alterar o que for preciso -->
+        <div class="card_header">
+            <div class="img-container">
+                <img class="news-img" src="img/noticia.jpg" alt="Imagem da notícia">
+                <div class="overlay">
+                    <strong class="news-title">Notícias da Semana</strong>
+                </div>
+            </div>
+            <div class="details">
+                <div class="name-fav">
+                    <strong class="news-title">GTA VI Tem Estreia Mundial Épica</strong>
+                </div>
+                <div class="wrapper">
+                    <p>Ontem marcou um momento histórico na indústria dos videogames, com o aguardado lançamento de
+                        "Grand Theft Auto VI" pela renomada desenvolvedora Rockstar Games. Os fãs de todo o mundo
+                        estavam em êxtase, esperando ansiosamente para mergulhar nas ruas caóticas e repletas de ação da
+                        mais recente adição à icônica franquia</p>
+                </div>
+                <!-- Botão para abrir o pop-up -->
+                <button class="card-popup-button" onclick="openPopup(
+                `GTA VI Tem Estreia Mundial Épica`,
+                `Ontem marcou um momento histórico na indústria dos videogames, com o aguardado lançamento de
+                    'Grand Theft Auto VI' pela renomada desenvolvedora Rockstar Games. Os fãs de todo o mundo\
+                    estavam em êxtase, esperando ansiosamente para mergulhar nas ruas caóticas e repletas de ação da
+                    \mais recente adição à icônica franquia `,
+                `img/noticia.jpg`
+            )">
+                    Ver Tudo
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="titulo">
+            <h1>Top 3 da Semana</h1>
+        </div>
+        <div id="cards">
+            <!-- Card do TOP 1 -->
+            <div class="card">
+                <div class="img-container">
+                    <img class="news-img" src="img/top1.jpg" alt="Imagem da notícia">
+                    <div class="overlay">
+                        <strong class="news-title">1º Lugar</strong>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="name-fav">
+                        <strong class="news-title">Lagum - Ninguém me Ensinou</strong>
+                    </div>
+                    <div class="wrapper">
+                        <p>Lagum dominando o primeiro lugar! A vibe de 'Quem Te Ensina a Sonhar' é tão contagiante que
+                            conquistou o coração e a coroa do nosso Top 3. 🎶✨ </p>
+                    </div>
+                    <!-- Botão para abrir o pop-up -->
+                    <button class="card-popup-button" onclick="openPopup(
+                    `Lagum - Ninguém me Ensinou`,
+                    `Lagum dominando o primeiro lugar! A vibe de 'Quem Te Ensina a Sonhar' é tão contagiante que conquistou o coração e a coroa do nosso Top 3. 🎶✨ `,
+                    `img/top1.jpg`
+                )">
+                        Ver Tudo
+                    </button>
+                </div>
+            </div>
+            <!-- Card do TOP 2 -->
+            <div class="card">
+                <div class="img-container">
+                    <img class="news-img" src="img/top2.jpg" alt="Imagem da notícia">
+                    <div class="overlay">
+                        <strong class="news-title">2º Lugar</strong>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="name-fav">
+                        <strong class="news-title">AJR - World's Smallest Violin</strong>
+                    </div>
+                    <div class="wrapper">
+                        <p>AJR chegando com tudo! 'World's Smallest Violin' ficou no segundo lugar, mas no nosso
+                            coração, é um verdadeiro campeão. 🎻🥈</p>
+                    </div>
+                    <!-- Botão para abrir o pop-up -->
+                    <button class="card-popup-button" onclick="openPopup(
+                    `AJR - World's Smallest Violin`,
+                    `AJR chegando com tudo! World's Smallest Violin' ficou no segundo lugar, mas no nosso coração, é um verdadeiro campeão. 🎻🥈`,
+                    `img/top2.jpg`
+                )">
+                        Ver Tudo
+                    </button>
+                </div>
+            </div>
+            <!-- Card do TOP 3 -->
+            <div class="card">
+                <div class="img-container">
+                    <img class="news-img" src="img/top3.png" alt="Imagem da notícia">
+                    <div class="overlay">
+                        <strong class="news-title">3º Lugar</strong>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="name-fav">
+                        <strong class="news-title">Zé Neto e Cristiano - Largado às Traças</strong>
+                    </div>
+                    <div class="wrapper">
+                        <p>Zé Neto e Cristiano garantiram o bronze com 'Largado às Traças'. Uma canção que chegou,
+                            conquistou e agora tá mandando ver no nosso Top 3! 🥉🎤</p>
+                    </div>
+                    <!-- Botão para abrir o pop-up -->
+                    <button class="card-popup-button" onclick="openPopup(
+                    `Zé Neto e Cristiano - Largado às Traças`,
+                    `Zé Neto e Cristiano garantiram o bronze com 'Largado às Traças'. Uma canção que chegou, conquistou e agora tá mandando ver no nosso Top 3! 🥉🎤`,
+                    `img/top3.png`
+                )">
+                        Ver Tudo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+                <!-- Formulário de Pedido de Música -->
+    <form id="musicRequestForm">
+        <div id="request-song">
+            <div class="title-song">
+                <h1>Área do Ouvinte</h1>
+            </div>
+            <div class="form-song">
+                <div class="music-request-section">
+                    <div id="showFormButton" class="styled-button auto-pulse" onclick="toggleFormVisibility()">
+                        <img src="img/request.png" alt="">
+                        <h2>Clique aqui e Peça a sua Música</h2>
+                    </div>
+                    <div id="musicRequestFormContainer" style="display: none;">
+                        <form action="#" method="post" id="musicRequestForm">
+                            <div class="form-group">
+                                <label for="name">Nome:</label>
+                                <input type="text" id="name" name="name" required placeholder="Nos diga seu nome:">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-mail:</label>
+                                <input type="email" id="email" name="email" required
+                                    placeholder="Agora digite seu e-mail:">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="songRequest">Pedido de Música:</label>
+                                <textarea id="songRequest" name="songRequest" rows="4" required
+                                    placeholder="Nos diga qual música deseja, ou deixe sua mensagem:"></textarea>
+                            </div>
+
+                            <button type="button" onclick="enviarPedido()">Enviar Pedido</button>
+                        </form>
+    </form>
+    </div>
+    </div>
+    </div>
+
+    <footer>
+        <!-- Rodapé -->
+        <div class="social-media">
+            <a href="https://www.instagram.com/radio_amadorecatharina/" target="_blank">
+                <img src="img/instagram.png" alt="Instagram">
+                <span>Visite nosso Instagram</span>
+            </a>
+            <a href="#" target="_blank">
+                <img src="img/tiktok.png" alt="TikTok">
+                <span>Em breve no TikTok</span>
+            </a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Amador e Catharina Saporito Augusto. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Pop-up -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 id="popup-title"></h2>
+            <img id="popup-image" src="" alt="Imagem do Card">
+            <p id="popup-content"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("user_3Bq38FQCWy08FYK3Q"); 
+    </script>
+
+</body>
+</html>

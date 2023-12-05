@@ -1,0 +1,531 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(img/background.jpg);
+  background-size: cover;  
+  font-family: 'Coolvetica', sans-serif;
+  overflow-x: hidden;
+}
+
+/*----------------------------------------- CSS DA NAV -----------------------------------------*/
+
+nav {
+  background-image: url(img/top.png);
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 180px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 200px;
+  cursor: pointer;
+}
+
+.logo h1{
+  font-family: 'Be True To Your School', sans-serif;
+  font-size: 40pt;
+  color: white;
+}
+
+.logo_radio img{
+  width: 400px;
+}
+
+/*----------------------------------------- CSS DO PLAYER -----------------------------------------*/
+
+.radio{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-direction: column; */
+  text-align: center;
+  color: #fff;
+}
+
+#audioPlayer {
+  background-color: #9cd8d9; 
+  border-radius: 50px; 
+  color: #ffffff; 
+  padding: 10px;
+  margin-right: 50px;
+  transition: background-color 0.3s ease; 
+}
+
+#audioPlayer::-webkit-media-controls {
+  background-color: #9cd8d9; 
+  color: #ffffff; 
+}
+
+#audioPlayer::after {
+  content: "Seu navegador não suporta a tag de áudio.";
+  display: block;
+  color: #ffffff;
+}
+
+#audioPlayer:hover {
+  background-color: #9cd8d9; 
+}
+
+/*----------------------------------------- CSS DA HEADER -----------------------------------------*/
+
+header{
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+/*----------------------------------------- CSS DO CARD DA HEADER -----------------------------------------*/
+
+.card_header {
+  position: relative;
+  width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.5s;
+
+}
+
+.card_header:hover .details {
+  transform: translateY(0);
+}
+
+/* Adicione as seguintes linhas para adicionar os efeitos ao card da header */
+.card_header .details {
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.card_header:hover {
+  transform: scale(1.10); /* Ajuste o valor conforme necessário */
+}
+
+.img-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.news-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #9cd8d9;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #b382ff;
+  opacity: 1;
+}
+
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: calc(100% - 30px);
+  overflow: hidden;
+  padding: 15px;
+  color: white;
+  box-sizing: border-box;
+  background: #2e2f33;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+/*----------------------------------------- CSS DA SECTION -----------------------------------------*/
+
+section{
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.titulo{
+  width: 450px;
+  text-align: center;
+  margin-left: 200px;
+  color: white;
+  font-size: 20pt;
+  background-image: url(img/top_titulo.png);
+  background-position: center center;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.titulo:hover{
+  color: #9cd8d9;
+  transition: 0.5s;
+}
+
+/*----------------------------------------- CSS DOS CARDS DA SECTION -----------------------------------------*/
+
+.card {
+  position: relative;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+#cards{
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#cards .card:hover .details {
+  transform: translateY(0);
+}
+
+.card:hover .details {
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: scale(1.10); /* Ajuste o valor conforme necessário */
+}
+
+.name-fav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.wrapper {
+  margin-top: 10px;
+}
+
+.wrapper p {
+  font-size: 0.9rem;
+  color: #fff;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Número de linhas a serem exibidas */
+  -webkit-box-orient: vertical;
+}
+
+/*----------------------------------------- CSS DO FORMULÁRIO PARA PEDIR MÚSICA -----------------------------------------*/
+
+.title-song{
+  width: 450px;
+  text-align: center;
+  margin-left: 200px;
+  color: white;
+  font-size: 16pt;
+  background-image: url(img/top_titulo.png);
+  background-position: center center;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.title-song:hover{
+  color: #9cd8d9;
+  transition: 0.5s;
+}
+
+#musicRequestForm{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#music_request {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
+}
+
+.music-request-section {
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.music-request-section h2 {
+  color: #b382ff;
+  font-size: 24px;
+  margin-bottom: 10px; /* Reduzido o espaçamento inferior */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%; 
+}
+
+.form-group label {
+  color: #b382ff;
+  font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #b382ff;
+  border-radius: 20px; 
+  width: calc(100% - 16px); /* Ajuste para garantir a largura total e levar em conta o padding */
+  box-sizing: border-box; /* Garantir que a largura inclua padding */
+}
+
+#musicRequestForm button {
+  background-color: #b382ff;
+  color: #fff;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 20px; 
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+#musicRequestForm button:hover {
+  background-color: #9cd8d9;
+}
+
+.showFormButton {
+  background-image: url(img/top.png);
+  border-radius: 20px; 
+}
+
+.styled-button {
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 20px; 
+  cursor: pointer;
+}
+
+.styled-button img {
+  width: 50px;
+}
+
+#request-song{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 500px;
+  
+}
+
+.form-song{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 500px;
+
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 1s infinite;
+}
+
+/*----------------------------------------- CSS DO RODAPÉ -----------------------------------------*/
+
+footer {
+  background-image: url(img/footer.png);
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+}
+
+.social-media a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 20px;
+}
+
+.social-media img {
+  width: 40px; /* Ajuste o tamanho conforme necessário */
+  margin-bottom: 10px;
+}
+
+.copyright p {
+  color: #fff;
+  font-size: 18px;
+}
+
+/*----------------------------------------- CSS DO POP-UP -----------------------------------------*/
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* Adicione ao seu arquivo style.css */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.popup img {
+    max-width: 100%;
+    height: auto;
+    width: 30%; 
+    height: auto; /* Mantenha a altura automática para manter a proporção original */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.card-popup-button {
+  color: white;
+  background: #2e2f33;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card-popup-button:hover {
+  background: #434547;
+}
+
+h1 span {
+  animation: pulse 1s infinite;
+  color: #9cd8d9;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
