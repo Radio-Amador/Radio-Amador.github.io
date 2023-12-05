@@ -91,9 +91,13 @@ nav {
 
 header{
   width: 90%;
-  height: 300px;
+  height: 300px; /* Dobrar o tamanho para cada notícia adicional*/
   max-width: 100%;
   margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 
@@ -126,6 +130,7 @@ section{
   margin-bottom: 20px;
   border-radius: 10px;
   width: 80%; /* Faça com que cada card ocupe 100% da largura do contêiner pai */
+  
 }
 
 .img-container {
@@ -232,7 +237,7 @@ footer{
 }
 
 .card-popup-button {
-  margin-left: 35px;
+  margin-left: 70px;
 }
 
 
