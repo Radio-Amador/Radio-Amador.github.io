@@ -3,6 +3,7 @@
 
 * {
   overflow-x: hidden;
+  
 }
 body {
   max-width: 100%;
@@ -76,6 +77,18 @@ nav {
   margin: 20px auto;
 }
 
+.title-song{
+  height: 300px;
+}
+
+.form-song{
+  height: 1200px;
+}
+
+#request-song{
+  height: 800px;
+}
+
 header{
   width: 90%;
   height: 300px;
@@ -106,27 +119,32 @@ section{
   width: 90%;
   max-width: 100%;
   border-radius: 10px;
-
   height: auto;
 }
+
 .card {
   margin-bottom: 20px;
   border-radius: 10px;
-
   width: 80%; /* Faça com que cada card ocupe 100% da largura do contêiner pai */
 }
 
 .img-container {
   width: 100%; /* Faça a imagem ocupar toda a largura do contêiner pai */
+  border-radius: 10px;
+
+  
 }
 
 .news-img {
   width: 100%; /* Faça a imagem ocupar toda a largura do contêiner pai */
   height: auto; /* Mantenha a altura automática para manter a proporção original */
+  border-radius: 10px;
+
 }
 
 .details {
   width: 100%; /* Faça os detalhes ocuparem toda a largura do contêiner pai */
+  border-radius: 10px;
 }
 
 .wrapper p {
@@ -189,6 +207,7 @@ footer{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 300px;
 }
 
 .popup-content {
