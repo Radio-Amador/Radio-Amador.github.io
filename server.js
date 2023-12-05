@@ -13,14 +13,6 @@ function closePopup() {
 }
 
 
-// // Adiciona um evento de clique para pausar/play ao clicar no player
-// audioPlayer.addEventListener('click', function () {
-//     if (audioPlayer.paused) {
-//         audioPlayer.play();
-//     } else {
-//         audioPlayer.pause();
-//     }
-// });
 function enviarPedido() {
     // Obtenha os valores dos campos do formulário
     var nome = document.getElementById('name').value;
@@ -43,12 +35,25 @@ function enviarPedido() {
     emailjs.send(data.service_id, data.template_id, data.template_params, data.user_id)
         .then(function (response) {
             console.log('Pedido enviado com sucesso!', response);
+            
+            // Exiba o popup de sucesso
+            openSuccessPopup();
+
             // Limpe o formulário após o envio
             document.getElementById('musicRequestForm').reset();
         }, function (error) {
             console.log('Erro ao enviar o pedido', error);
         });
 }
+
+function openSuccessPopup() {
+    document.getElementById('successPopup').style.display = 'block';
+}
+
+function closeSuccessPopup() {
+    document.getElementById('successPopup').style.display = 'none';
+}
+
 
 document.addEventListener("DOMContentLoaded", function () {
     var button = document.querySelector('.auto-pulse');
