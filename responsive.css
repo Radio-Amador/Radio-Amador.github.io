@@ -26,6 +26,11 @@ body {
   width: 100%;
 }
 
+
+.overlay{
+  height: 30%;
+}
+
 .news-title {
   font-size: 1rem;
 }
@@ -100,10 +105,14 @@ section{
   justify-content: space-around;
   width: 90%;
   max-width: 100%;
+  border-radius: 10px;
+
   height: auto;
 }
 .card {
   margin-bottom: 20px;
+  border-radius: 10px;
+
   width: 80%; /* Faça com que cada card ocupe 100% da largura do contêiner pai */
 }
 
@@ -181,6 +190,21 @@ footer{
   justify-content: center;
   flex-direction: column;
 }
+
+.popup-content {
+  width: 80%; /* Ou ajuste conforme necessário */
+  max-width: 100%;
+}
+
+#popup-image {
+  width: 90%; /* Faça a imagem ocupar toda a largura do contêiner pai */
+  height: auto; /* Mantenha a altura automática para manter a proporção original */
+}
+
+#popup-content {
+  font-size: 0.8rem; /* Ajuste o tamanho do texto conforme necessário */
+}
+
 .popup img {
   max-width: 100%;
   height: auto;
